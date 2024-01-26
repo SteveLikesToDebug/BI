@@ -13,6 +13,6 @@ Těším se až uvidím tě jasně.
 """)
 
 
-df = pd.read_csv('/Users/stepan/Desktop/BI/github/doctor_prescription_counts.csv')
+df = pd.read_csv('/doctor_prescription_counts.csv')
 
 st.write(df)
