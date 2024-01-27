@@ -19,7 +19,6 @@ df = pd.read_csv('./doctor_prescription_counts.csv', sep=';')
 st.write(df)
 
 
-
 import matplotlib.pyplot as plt
 df2 = pd.read_csv('./medication_usage_summary.csv', sep=';')
 bins = [0, 5, 10, 15, 20, float('inf')]
