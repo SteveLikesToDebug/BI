@@ -24,10 +24,11 @@ df['category'] = pd.cut(df['user_count'], bins=bins, labels=labels, right=False)
 
 category_counts = df['category'].value_counts(normalize=True) * 100
 
-plt.figure(figsize=(10, 6))
-category_counts.plot(kind='bar')
-plt.xlabel('Number of Users')
-plt.ylabel('Percentage of Medications')
-plt.title('Medication Usage by User Count Categories')
 
-st.pyplot(plt)
+fig, ax = plt.subplots(figsize=(10, 6))
+category_counts.plot(kind='bar', ax=ax)
+ax.set_xlabel('Number of Users')
+ax.set_ylabel('Percentage of Medications')
+ax.set_title('Medication Usage by User Count Categories')
+
+st.pyplot(fig)
