@@ -1,8 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pylab
-import matplotlib.pyplot as plt
+
 
 
 st.write("""
@@ -18,5 +17,7 @@ Těším se až uvidím tě jasně.
 
 df = pd.read_csv('./doctor_prescription_counts.csv')
 st.write(df)
+
+
 
 
