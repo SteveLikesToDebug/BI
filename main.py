@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import pylab
 
 st.write("""
 Hello Leo,\\
@@ -30,5 +31,5 @@ category_counts.plot(kind='bar', ax=ax)
 ax.set_xlabel('Number of Users')
 ax.set_ylabel('Percentage of Medications')
 ax.set_title('Medication Usage by User Count Categories')
-
+fig = fig.figure
 st.pyplot(fig)
