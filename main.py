@@ -35,3 +35,5 @@ ax.set_title('Number of Medication Names by User Count Categories')
 
 #plt.show()
 st.pyplot(fig)
+
+#jsi lína píča, pracuj!!!
