@@ -36,19 +36,17 @@ ax.set_title('Number of Medication Names by User Count Categories')
 #plt.show()
 st.pyplot(fig)
 
-plt.figure()
-
-
 
 fig, ax = plt.subplots()
 ax.pie(category_counts, labels=category_counts.index, autopct='%1.1f%%', startangle=90)
 ax.axis('equal')
 
 st.pyplot(fig)
-plt.figure()
+
 #jsi lína píča, pracuj!!!
 
 df3 = pd.read_csv('./medicament_count_graph.csv', sep=';')
+df3 = df3[df3['count'] > 0]
 category_counts3 = df3.set_index('category')['count']
 fig3, ax3 = plt.subplots()
 ax3.pie(category_counts3, labels=category_counts3.index, autopct='%1.1f%%', startangle=0)
