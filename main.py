@@ -39,12 +39,13 @@ st.pyplot(fig)
 
 
 
-plt.figure()
+
 fig, ax = plt.subplots()
 ax.pie(category_counts, labels=category_counts.index, autopct='%1.1f%%', startangle=90)
 ax.axis('equal')
 
 st.pyplot(fig)
+plt.figure()
 #jsi lína píča, pracuj!!!
 
 df3 = pd.read_csv('./medicament_count_graph.csv', sep=';')
