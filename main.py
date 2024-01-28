@@ -46,8 +46,8 @@ st.pyplot(fig)
 #jsi lína píča, pracuj!!!
 
 df3 = pd.read_csv('./medicament_count_graph.csv')
-category_counts = df3.set_index('category')['count']
+category_counts3 = df3.set_index('category')['count']
 fig3, ax = plt.subplots()
-ax.pie(category_counts, labels=category_counts.index, autopct='%1.1f%%', startangle=90)
+ax.pie(category_counts3, labels=category_counts3.index, autopct='%1.1f%%', startangle=90)
 ax.axis('equal')
 st.pyplot(fig3)
