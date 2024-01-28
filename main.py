@@ -42,7 +42,9 @@ ax.pie(category_counts, labels=category_counts.index, autopct='%1.1f%%', startan
 ax.axis('equal')
 
 st.pyplot(fig)
-
+st.write("""
+    Tento graf znázorňuje, že pouhé jedno procento léků je běžně používáno velkou skupinou lidí 
+    """)
 #jsi lína píča, pracuj!!!
 
 df3 = pd.read_csv('./medicament_count_graph.csv', sep=';')
@@ -52,4 +54,7 @@ fig3, ax3 = plt.subplots()
 ax3.pie(category_counts3, labels=category_counts3.index, autopct='%1.1f%%', startangle=0)
 ax3.axis('equal')
 st.pyplot(fig3)
+st.write("""
+    Druhý koláčový graf říká, že 98% procent lidí má doma v průměru 20-25 léků, pouhá dvě procenta mají doma léků výrazně méně.
+    """)
 #mrdko
