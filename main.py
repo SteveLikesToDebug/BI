@@ -7,7 +7,7 @@ def intro():
     st.title("Welcome to the Healthcare Data Analysis App")
     st.write("This application provides insights into healthcare data from two perspectives: users and doctors.")
     st.write("Navigate through the app using the sidebar to explore different data visualizations and insights.")
-    
+
     df = pd.read_csv('./doctor_prescription_counts.csv', sep=';')
     st.write(df)
 def user_overview():
@@ -55,6 +55,9 @@ def doctor_overview():
     st.pyplot(fig3)
 
     # mrdko
+
+def database_overview():
+    st.write("Zde můžete vidět veškeré věci co se týkají databáze")
 
 def basnicka():
     st.title('Pro Leu')
