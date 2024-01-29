@@ -2,17 +2,52 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+def intro():
+    st.title("Welcome to the Healthcare Data Analysis App")
+    st.write("This application provides insights into healthcare data from two perspectives: users and doctors.")
+    st.write("Navigate through the app using the sidebar to explore different data visualizations and insights.")
+
+def user_overview():
+    st.title("User Overview")
+    st.write("This section presents an overview of user data from the database.")
+    # Add code to load and display user data, e.g.:
+    # user_df = pd.read_csv('path_to_user_data.csv')
+    # st.write(user_df)
+    # st.bar_chart(user_df['some_column'])
+
+def doctor_overview():
+    st.title("Doctor Overview")
+    st.write("This section is dedicated to data related to doctors.")
+    # Add code to load and display doctor data, e.g.:
+    # doctor_df = pd.read_csv('path_to_doctor_data.csv')
+    # st.write(doctor_df)
+    # st.line_chart(doctor_df['some_metric'])
+
+def basnicka():
+    st.title('Pro Leu')
+    st.write("""
+        Hello Leo,\\
+        Dnes již tři týdny se známe,\\
+        Bylo to velice krásné, příjemné a zrádné,\\
+        Po tobě bude se mi teď stýskati,\\
+        Doufám, že ve snech tvou krásu budu vídati,\\
+        Nechť mají se tvé oči krásně,\\
+        Těším se až uvidím tě jasně.
+        """)
+
+st.sidebar.title("Navigation")
+page = st.sidebar.radio("Select a page:", ('Introduction', 'User Overview', 'Doctor Overview','Básnička'))
+
+if page == 'Introduction':
+    intro()
+elif page == 'User Overview':
+    user_overview()
+elif page == 'Doctor Overview':
+    doctor_overview()
+elif page == 'Básnička':
+    basnicka()
 
 
-st.write("""
-    Hello Leo,\\
-    Dnes již tři týdny se známe,\\
-    Bylo to velice krásné, příjemné a zrádné,\\
-    Po tobě bude se mi teď stýskati,\\
-    Doufám, že ve snech tvou krásu budu vídati,\\
-    Nechť mají se tvé oči krásně,\\
-    Těším se až uvidím tě jasně.
-    """)
 
 
 df = pd.read_csv('./doctor_prescription_counts.csv', sep=';')
