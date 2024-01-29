@@ -8,8 +8,7 @@ def intro():
     st.write("This application provides insights into healthcare data from two perspectives: users and doctors.")
     st.write("Navigate through the app using the sidebar to explore different data visualizations and insights.")
 
-    df = pd.read_csv('./doctor_prescription_counts.csv', sep=';')
-    st.write(df)
+
 def user_overview():
     st.title("User Overview")
     st.write("This section presents an overview of user data from the database.")
@@ -41,6 +40,10 @@ def user_overview():
 def doctor_overview():
     st.title("Doctor Overview")
     st.write("This section is dedicated to data related to doctors.")
+
+    st.write("Seznam doktorů a počty předepsaných léků")
+    df = pd.read_csv('./doctor_prescription_counts.csv', sep=';')
+    st.write(df)
 
     # jsi lína píča, pracuj!!!
     st.write("""
