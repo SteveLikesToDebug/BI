@@ -4,14 +4,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def intro():
-    st.title("Welcome to the Healthcare Data Analysis App")
-    st.write("This application provides insights into healthcare data from two perspectives: users and doctors.")
-    st.write("Navigate through the app using the sidebar to explore different data visualizations and insights.")
+    st.title("Analýza léků z prodeje z lékárny/FN")
+    st.write("Tato aplikace dává vhled k analýze dat týkající se používání léků, jak volně prodejných tak na předpis. ")
+    st.write("Pro jednotlivé rozebírané kategorie prosím volte z menu vlevo. V každé naleznete rychlou analýzu dat z databáze, jejíž struktura je taktéž k nahlédnutí.")
 
 
-def user_overview():
-    st.title("User Overview")
-    st.write("This section presents an overview of user data from the database.")
+def medicaments():
+    st.title("Volně prodejné léky")
+    st.write("V této sekci se věnujeme analýze prodeje volně dostupných léků.")
     df2 = pd.read_csv('./medication_usage_summary.csv', sep=';')
     bins = [0, 5, 10, 15, 20, float('inf')]
     labels = ['1-5', '6-10', '11-15', '16-20', '20+']
@@ -37,9 +37,9 @@ def user_overview():
         Tento graf znázorňuje, že pouhé jedno procento léků je běžně používáno velkou skupinou lidí 
         """)
 
-def doctor_overview():
-    st.title("Doctor Overview")
-    st.write("This section is dedicated to data related to doctors.")
+def prescriptions():
+    st.title("Léky na předpis a jednotliví doktoři")
+    st.write("V této kapitole je rozebráno jaké léky se předepisují nejčastěji. Taktéž je zde pracovní analýza jednotlivých doktorů.")
 
     st.write("Seznam doktorů a počty předepsaných léků")
     df = pd.read_csv('./doctor_prescription_counts.csv', sep=';')
@@ -74,15 +74,17 @@ def basnicka():
         Těším se až uvidím tě jasně.
         """)
 
-st.sidebar.title("Navigation")
-page = st.sidebar.radio("Select a page:", ('Introduction', 'User Overview', 'Doctor Overview','Básnička'))
+st.sidebar.title("Menu")
+page = st.sidebar.radio("Zvolne stránku:", ('Úvod', 'Volně prodejné léky','Léky na předpis', 'Databáze','Básnička'))
 
-if page == 'Introduction':
+if page == 'Úvod':
     intro()
-elif page == 'User Overview':
-    user_overview()
-elif page == 'Doctor Overview':
-    doctor_overview()
+elif page == 'Volně prodejné léky':
+    medicaments()
+elif page == 'Léky na předpis':
+    prescriptions()
+elif page == 'Databáze':
+    database_overview()
 elif page == 'Básnička':
     basnicka()
 
