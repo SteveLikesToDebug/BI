@@ -8,6 +8,10 @@ def intro():
     st.write("Tato aplikace dává vhled k analýze dat týkající se používání léků, jak volně prodejných tak na předpis. ")
     st.write("Pro jednotlivé rozebírané kategorie prosím volte z menu vlevo. V každé naleznete rychlou analýzu dat z databáze, jejíž struktura je taktéž k nahlédnutí.")
 
+    st.subheader("Databaze léků")
+    medication_data = pd.read_csv('./sukl_meds_all.csv', sep=';')
+    st.dataframe(medication_data)
+    
 
 def medicaments():
     st.title("Volně prodejné léky")
