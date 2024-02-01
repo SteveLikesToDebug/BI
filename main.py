@@ -86,23 +86,7 @@ elif page == 'Léky na předpis':
     prescriptions()
 elif page == 'Databáze':
     database_overview()
-#elif page == 'Básnička':
-    #basnicka()
 
 
 
 
-
-
-
-def basnicka():
-    st.title('Pro Leu')
-    st.write("""
-        Hello Leo,\\
-        Dnes již tři týdny se známe,\\
-        Bylo to velice krásné, příjemné a zrádné,\\
-        Po tobě bude se mi teď stýskati,\\
-        Doufám, že ve snech tvou krásu budu vídati,\\
-        Nechť mají se tvé oči krásně,\\
-        Těším se až uvidím tě jasně.
-        """)
