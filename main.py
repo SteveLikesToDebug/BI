@@ -66,18 +66,8 @@ def prescriptions():
 
 def database_overview():
     st.write("Zde můžete vidět veškeré věci co se týkají databáze")
-    st.image("./IMG_2488.png", caption='Schéma databáze')
-def basnicka():
-    st.title('Pro Leu')
-    st.write("""
-        Hello Leo,\\
-        Dnes již tři týdny se známe,\\
-        Bylo to velice krásné, příjemné a zrádné,\\
-        Po tobě bude se mi teď stýskati,\\
-        Doufám, že ve snech tvou krásu budu vídati,\\
-        Nechť mají se tvé oči krásně,\\
-        Těším se až uvidím tě jasně.
-        """)
+    st.image("./IMG_2488.PNG", caption='Schéma databáze')
+
 
 
 st.sidebar.title("Menu")
@@ -100,3 +90,14 @@ elif page == 'Databáze':
 
 
 
+def basnicka():
+    st.title('Pro Leu')
+    st.write("""
+        Hello Leo,\\
+        Dnes již tři týdny se známe,\\
+        Bylo to velice krásné, příjemné a zrádné,\\
+        Po tobě bude se mi teď stýskati,\\
+        Doufám, že ve snech tvou krásu budu vídati,\\
+        Nechť mají se tvé oči krásně,\\
+        Těším se až uvidím tě jasně.
+        """)
