@@ -70,7 +70,7 @@ def database_overview():
     if os.path.isfile('./IMG_2488.png'):
         st.image('./IMG_2488.png', caption='Schéma databáze')
     else:
-        st.error(f"Error: file path  {'./IMG_2488.png'} neexistuje")
+        st.write(f"Error: file path  {'./IMG_2488.png'} neexistuje")
 
     st.image("./IMG_2488.png", caption='Schéma databáze')
 
