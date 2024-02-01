@@ -66,7 +66,7 @@ def prescriptions():
 
 def database_overview():
     st.write("Zde můžete vidět veškeré věci co se týkají databáze")
-    st.image("./IMG_2488.HEIC", caption='Schéma databáze')
+    st.image("./IMG_2488.jpg", caption='Schéma databáze')
 def basnicka():
     st.title('Pro Leu')
     st.write("""
