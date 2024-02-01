@@ -72,7 +72,6 @@ def database_overview():
     else:
         st.write(f"Error: file path  {'./IMG_2488.png'} neexistuje")
 
-    st.image("./IMG_2488.png", caption='Schéma databáze')
 
 
 
