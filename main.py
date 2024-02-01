@@ -81,7 +81,7 @@ def basnicka():
 
 
 st.sidebar.title("Menu")
-page = st.sidebar.radio("Zvolne stránku:", ('Úvod', 'Volně prodejné léky', 'Léky na předpis', 'Databáze','Básnička'))
+page = st.sidebar.radio("Zvolne stránku:", ('Úvod', 'Volně prodejné léky', 'Léky na předpis', 'Databáze'))
 
 if page == 'Úvod':
     intro()
