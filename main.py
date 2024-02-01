@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 def intro():
     st.title("Analýza léků z prodeje z lékárny/FN")
@@ -67,6 +68,10 @@ def prescriptions():
 def database_overview():
     st.write("Zde můžete vidět veškeré věci co se týkají databáze")
     st.image("./IMG_2488.png", caption='Schéma databáze')
+    if os.path.isfile('./IMG_2488.png'):
+        st.image('./IMG_2488.png', caption='Schéma databáze')
+    else:
+        st.error(f"Error: file path  {'./IMG_2488.png'} neexistuje")
 
 
 
