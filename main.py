@@ -66,7 +66,7 @@ def prescriptions():
 
 def database_overview():
     st.write("Zde můžete vidět veškeré věci co se týkají databáze")
-    st.image("./IMG_2488.PNG", caption='Schéma databáze')
+    st.image("./IMG_2488.png", caption='Schéma databáze')
 
 
 
