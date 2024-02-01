@@ -91,8 +91,8 @@ elif page == 'Léky na předpis':
     prescriptions()
 elif page == 'Databáze':
     database_overview()
-elif page == 'Básnička':
-    basnicka()
+#elif page == 'Básnička':
+    #basnicka()
 
 
 
