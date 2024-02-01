@@ -67,11 +67,12 @@ def prescriptions():
 
 def database_overview():
     st.write("Zde můžete vidět veškeré věci co se týkají databáze")
-    st.image("./IMG_2488.png", caption='Schéma databáze')
     if os.path.isfile('./IMG_2488.png'):
         st.image('./IMG_2488.png', caption='Schéma databáze')
     else:
         st.error(f"Error: file path  {'./IMG_2488.png'} neexistuje")
+
+    st.image("./IMG_2488.png", caption='Schéma databáze')
 
 
 
